@@ -78,6 +78,75 @@
 Revision of logic circuits with emphasis on control lines
 \end_layout
 
+\begin_layout Standard
+Using binary logic for computers is much easier than decimal logic, since
+ it naturally allows us to use the two state analogy of switches.
+ Switches can be in two states - on, off.
+ Similarly, binary numbers are represented by two types of digits - 0 and
+ 1.
+ 
+\end_layout
+
+\begin_layout Subsection
+Microprocessors & Microcontrollers
+\end_layout
+
+\begin_layout Standard
+Microprocessors are at the core of modern day computing.
+ On the basis of instructions that microprocessors understand, their computers
+ are called either RISCs (reduced instruction set computers) or CISCs (complex
+ instruction set computers).
+ RISCs typically consist of more internal registers than CISCs and have
+ much simpler designs.
+ The difference between microprocessors and microcontrollers, however, is
+ more subtle.
+ A 
+\series bold
+microprocessor
+\series default
+ is highly programmable and understands all general instructions.
+ 
+\series bold
+Microcontrollers
+\series default
+, are packaged and pre programmed boards meant for specific purposes, thereby
+ understanding specific inputs.
+ For example, your Android phone has a microprocessor, but your oven or
+ fridge typically works via a microcontroller.
+\end_layout
+
+\begin_layout Subsection
+ASCII
+\end_layout
+
+\begin_layout Standard
+ASCII stands for 
+\series bold
+American Standard Code for Information Interchange
+\series default
+.
+ Its an input output mapping which maps characters, numbers, newlines, spaces
+ and different sorts of inputs to a binary 7 digit code.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/ASCII1.GIF
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 SAP concepts with stress on timing diagrams
 \end_layout
