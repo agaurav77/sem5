@@ -1,0 +1,35 @@
+CS 6108	- COMPUTER NETWORKS	LAB
+-------------------------------
+
+Class I and II: 
+  Familiarization to:
+    1. Network components such as Modem, Gateways, Routers, Switches, Cables etc.
+    2. Various network softwares, services and applications.
+    3. Network trouble shooting Techniques: Trouble shooting basic TCP/IP problems.
+    4. Commands like ipconfig, getmac, tracert, pathping, arp, ping, netstat, finger etc.
+    5. Straight cabling, Cross cabling, Signal testing, T568A and B wiring standards (including hands on practice)
+
+Class III, IV, and V: 
+  1. Program that prints the address of www.bitmesra.ac.in
+  2. Program that prints all the addresses of www.indianrail.gov.in
+  3. Program that scans lower ports and prints them.
+  4. Program to list host names from command line, attempt to open socket to each one and print the remote host, the remote port, the local address and the local port.
+
+Class VI and VII: 
+  1. Program for splitting the URLs entered into command line into component parts.
+  2. Program to list all the interfaces available on a workstation.
+
+Class VIII and IX:
+  TCP/IP and UDP/IP socket Programming
+    1. Program for “echo” client.  The Client enters data to the server, and the server echoes the data back to the clients.
+    2. Program for “echo” Server.  The Server listens at the port specified and reads from client and echoes back the result.
+
+Class X and XI:
+Serial Port programming
+  1. Program to write out “Hello World” to a serial port or to a USB to Serial Converter.
+  2. Simple RPC Programming. (Introductory level)
+
+Text Book:
+1. Youlu Zheng and Shakil Akhtar, Networks for Computer scientists & Engineers Lab manual, Oxford Univ. Press
+2. Douglas E.Comer, Hands on Networking with Internet Technologies, Pearson Education
+

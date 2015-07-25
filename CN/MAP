@@ -1,0 +1,57 @@
+CS 6107 - COMPUTER NETWORKS
+---------------------------
+
+MODULE I
+  Foundation:
+    Applications, 
+    Requirements, 
+    Network Architecture, 
+    Implementing 
+    Network Software, 
+    Performance.
+
+MODULE II
+  Direct Link Networks: 
+    Hardware Building Blocks, 
+    Encoding (NRZ, NRZI, Manchester, 4B/5B), 
+    Framing, 
+    Error Detection, 
+    Reliable Detection, 
+    Reliable Transmission, 
+
+MODULE III
+  Ethernet (802.3), 
+  Token Rings (802.5, FDDI), 
+  Wireless (802.11), 
+  Network adaptors.
+
+MODULE IV 
+  Internetworking: 
+    Simple Internetworking (IP),
+    Routing, 
+    Global Internet, 
+
+MODULE V
+  Multicast, 
+  Multiprotocol Label Switching (MPLS).
+
+MODULE VI
+  End-to-End Protocols: 
+    Simple Demultiplexer (UDP), 
+    Reliable Byte Stream (TCP), 
+    Remote Procedure Call.
+
+MODULE VII
+  Congestion Control and Resource Allocation: 
+    Issues in Resource Allocation, 
+    Queuing Disciplines, 
+    TCP Congestion Control, 
+    Congestion-Avoidance Mechanisms, 
+    Quality of Service.
+
+Text Book:
+1. L.L. Peterson & B.S. Davie- Computer Networks: A Systems Approach, 3rd Edition, Morgan Kaufman Publication, New Delhi, 2006
+
+Reference Books:
+1. A. Forouzan -  Data communications and Networking, 4th Edn., TMH, New Delhi, 2006
+2. P.C. Gupta- Data Communications and Computer Networks, PHI, New Delhi, 2006.

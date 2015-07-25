@@ -1,0 +1,56 @@
+CS 5101 - FORMAL LANGUAGES AND AUTOMATA THEORY
+----------------------------------------------
+
+MODULE - I
+  Introduction to Automata:
+    Study and Central concepts of automata theory, 
+    An informal picture of finite automata, 
+    deterministic and non-deterministic finite automatas, 
+    applications of finite automata, 
+    finite automata with epsilon – transitions.		      				
+
+MODULE - II	
+  Regular expression and languages: 
+    Regular expressions, 
+    finite automata and regular expressions, 
+    applications of regular expressions, 
+    algebraic laws of regular expressions.		
+
+MODULE - III
+  Properties of Regular Languages: 
+    Proving languages not to be regular, 
+    closure properties of regular languages, 
+    equivalence and minimization of automata.	
+
+MODULE - IV
+  Context – free Grammars and Languages: 
+    Parse trees, 
+    Applications of context free grammars, 
+    Ambiguity in grammars and languages.			
+
+MODULE - V
+  Pushdown Automata: 
+    Pushdown automation (PDA), 
+    the language of PDA, 
+    equivalence of PDA’s and CFG’s, 
+    Deterministic Pushdown Automata.	 
+
+MODULE - VI
+  Properties of Context – Free Languages:
+    Normal forms of context free grammars, 
+    pumping lemma for context free languages, 
+    close properties of context free languages. 
+
+MODULE - VII
+  Introduction to Turing Machine: 
+    The Turing machine, 
+    programming techniques for Turing machine, 
+    extensions to the basic Turing machine, 
+    restricted Turing Machines, 
+    Turing Machines and Computers.		
+
+Text Books:
+1.	J.E. Hopcroft , et.al. - Introduction to Automata Theory, Languages and Computation, 2nd Edn. Pearson Education , New Delhi  2001
+Reference Books:
+1.    K.L.P. Misra – et.al. - Theory of Computer Science, 2nd Edn. PHI, New Delhi, 2000
+2. J.C. Martin - Introduction to Languages and the Theory of Computation 2nd Edn, TMH, New Delhi, 2000.

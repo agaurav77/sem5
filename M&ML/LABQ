@@ -1,0 +1,164 @@
+EC5102 - MICROPROCESSORS APPLICATION LAB
+----------------------------------------
+
+1. REARRANGING BYTES:
+16 bytes are residing in locations starting from 0C20H / 2400H. Write a program to transfer these bytes in locations starting from 0C40H / 2500H in such a way that first 8 bytes in the first block should appear at last 8 locations of the second block and the last 8 bytes in the first block at first 8 locations of the second block
+
+2. CHECKING BITS OF A WORD:
+A word is residing in location 0C40H / 2400H. Write a program to check each bit of the word starting from Ms bit and fill 16 locations starting from 0C20H / 2500H, with either 00H or FFH depending on the bit, FFH if bit is ‘1’ and 00H if the bit is ‘0’. Also count the no. of 1’s and 0’s (count in BCD) in the word and store them respectively at 0C30H / 2420H and 0C31H / 2421H
+
+3. FILLING UP 128 LOCATIONS:
+Write a program to fill up 128 locations starting from 0C00H / 2400H with bytes in the following pattern: first 64 locations to be filled up as 00H, 11H, 22H, ------, FFH, 00H, 11H, 22H, --------- and so on and the last 64 locations to be filled up as FFH, EEH, DDH, ---------, 00H, FFH, EEH, DDH and so on
+
+4. ADDITION OF 12 BYTES:
+Write a program to add 12 bytes residing in locations starting from 0C20H / 2400H, and store the sum in location 0C30H / 2500H (result space 2 bytes)
+
+5. SORTING IN DESCENDING ORDER:
+Write a program to sort 16 bytes residing in locations starting from 0C20H / 2400H, in descending order in the same location 
+
+6. MULTIPLICATION OF SINGLE BYTE BY SINGLE BYTE:
+Write a program to multiply a single byte residing in location 0C20H / 2400H by another byte residing in location 0C21H / 2401H and store the product in 0C22H / 2402H (Product space 2 bytes)
+
+7. ADDITION OF 18 BCD NO’S:
+Write a program to add 18 BCD no’s residing in locations starting from 0C20H / 2400H and store the sum in location 0C40H / 2500H (result space 2 bytes)
+
+8. ADDITION OF TWO 10-BYTE NO’S:
+Write a program to add a 10-byte no. residing in location 0C20H  / 2400H with     another 10-byte no. residing in location 0C30H / 2420H and store the sum in location 0C40H / 2440H (result space 11 bytes)
+ 
+9. ADDITION OF TWO 20-DIGIT BCD NO’s: 
+Write a program to add a 20-digit BCD number residing in location 0C20H / 2400H, with another 20-digit BCD number residing in location 0C30H / 2420H and store the result at location 0C40H / 2440H (result space 21 digits)
+
+10. BCD SUBTRACTION:
+Write a program to subtract a 6-digit BCD number residing in location 0C30H / 2420H from another 6-digit BCD number residing in location 0C20H / 2400H and store the difference in location 0C40H / 2440H
+
+11. SORTING EVEN AND ODD PARITY BYTES:
+Sixteen bytes reside in locations starting from 0C20H / 2400H. Write a program to sort them in the same locations according to parity, odd parity bytes first and then even parity bytes next. Keep the count (in BCD) of odd parity and even parity bytes at 0C30H / 2420H and 0C31H / 2421H respectively
+
+12. BINARY TO BCD CONVERSION:
+Write a program to convert a single byte binary number residing in location 0C20H / 2400H, to the corresponding BCD number and store it in location 0C21H / 2401H and 0C22H / 2402H in packed form
+
+13. BCD TO BINARY CONVERSION: 
+Write a program to convert a BCD number residing at 0C20H / 2400H to its corresponding binary number and store it at 0C21H / 2401H
+
+14. GROUPING ODD, EVEN, DIVIDE BY 4 AND DIVIDE BY 16 BYTES:
+Write a program to group 32 bytes residing in locations starting from 0C20H / 2400H in the following pattern: the odd bytes first, the even bytes but not divisible by 4, 8 or 16 next, the even bytes divisible by 4 but not by 8 or 16 next, the even bytes divisible by 8 and 16 last. They shall be stored in the same locations. Keep their respective counts (in BCD) at 4 locations starting from 0C40H / 2440H
+
+15. MULTIPLICATION OF TWO 5-BYTE BINARY NUMBERS:
+Write a program to multiply a 5-byte binary number residing in location at 0C20H / 2400H by another 5-byte number residing in location at 0C30H / 2410H and store the result at 0C40H / 2440H (result space 10 bytes)
+
+16. LOGICAL OPERATION:
+A byte is residing at 0C20H / 2400H. Write a program to compute the bit S using the logical expression: S = A7.A6' + A5.A4 + A2.A1' and store the bit ‘S’ as MS bit in the location 0C21H / 2401H
+
+17. CONVERSION OF NIBBLES TO ASCII CODES:
+8-bytes are residing in locations starting from 0C20H / 2400H. Write a program to fill 16 locations starting from 0C40H / 2420H with the corresponding ASCII codes of the nibbles such that in the consecutive memory locations, the first location shall be filled up by the corresponding ASCII of the lower nibble and the second location with that of the higher nibble
+  
+18. NUMBER OF BITS IN BYTES:
+A block of 16 bytes resides in locations starting from 0C20H / 2400H. Write a program to form a second block of size 16 with the no. of 1’s in the corresponding byte of the first block, at locations starting from 0C30H / 2420H. (For e.g. the first entry in the second block will be the no. of 1’s in the first entry of the first block.)
+
+19. MAXIMUM AND MINIMUM BYTES:
+A table of data is stored in the memory locations starting from 0C21H / 2401H and the no. of elements in the table (in BCD ) is given  at 0C20H / 2400H.Write a program to  detect the maximum and minimum data byte in the table and store them at 0C10H / 2500H and 0C11H / 2501H respectively. Also store the addresses of the maximum and minimum bytes at 0C12H / 2502H and 0C13H / 2503H and at 0C14H / 2504H and 0C15H / 2505H respectively. If the maximum and minimum bytes are not unique fill 0C12H / 2502H and 0C13H / 2503H and 0C14H / 2504H and 0C15H / 2505H with 00H
+
+20. 5-BYTE5-BYTE BINARY MULTIPLICATION:
+Write a program to multiply a 5-byte signed binary number residing in location 0C20H / 2400H by another 5-byte signed binary number residing in location 0C30H / 2410H and store the product in location 0C40H / 2420H (result space 10 bytes)
+
+21. BCD MULTIPLICATION:
+Write a program to multiply a 6-digit BCD number residing in location 0C20H / 2400H by another 6-digit BCD number residing in location 0C30H / 2410H and store the result in location 0C40H / 2420H (result space 12 digits)
+
+22. BINARY DIVISION:
+Write a program to divide a word residing in location 0C20H /2400H by a byte residing in   location 0C30H / 2402H and store the quotient in 0C31H / 2403H (result space 2 bytes) and remainder in location 0C32H / 2405H
+
+23. SORTING SIGNED BYTES:
+Write a program to sort 16 signed binary bytes residing in location 0C20H /2400H in the same locations in such a way that the positive numbers should appear first, then zero bytes and then the negative numbers. Count the numbers   of positive, zero and negative bytes and store the counts (in BCD) 3 locations starting from 0C30H / 2410H respectively
+
+24. SORTING SIGNED BINARY BYTES IN ASCENDING ORDER:
+Write a program to sort 16-signed binary bytes residing at location starting from 0C20H / 2400H in the ascending order and store them at the same locations
+
+25. SIZE OF A BLOCK ENDING WITH A SPECIFIED BYTE:
+Write a program to estimate the size of a block which starts at 0C21H / 2401H and ends up with a data specified at 0C20H / 2400H. Keep the count (in BCD) at 0C90H / 2490H. The specified byte is also a part of the block. If the specified byte is not encountered within 99 numbers, put EEH at 0C90H / 2490H
+
+26. SIZE OF A BLOCK STARTING WITH 00H AND ENDING WITH 60H:
+A block of memory between 0C00H / 2400H and 0CA0H / 24A0H starts with 00H and ends with 60H. Write a program to count the number of bytes in the block. The two bytes 00H and 60H should not be included in the count. The count (in BCD) should be kept at 0CA1H / 24A1H. If the count is more than 99, store EEH at 0CA1H /24A1H
+
+27. SIZE OF A BLOCK ENDING WITH THREE ALTERNATE 00H:
+A block starts at 0C00H / 2400H and ends where three 00H at alternate locations (alternate means a 00H followed by a non-zero byte, again a 00H and again a non-zero byte and so on) are found. Write a program to estimate the size of the block including the three 00H. Keep the count (in BCD) at location 0CA1H / 24A1H. If the count is more than 99, store EEH at 0CA1H /24A1H
+
+28. NUMBER OF TIMES FFH OCCURS AS PAIR:
+A block starts at 0C20H / 2400H and ends at 0C2FH / 240FH. Write a program to count the number of times FFH occur as memory pairs and keep the count (BCD) in location 0C30H / 2410H. If four consecutive locations are filled up with FFH the count shall be 2 and so on
+
+29. CONSECUTIVE MEMORY LOCATIONS WITH IDENTICAL DATA: 
+A block starts at 0C20H / 2400H and ends at 0C3FH / 241FH. Write a program to determine the number of consecutive locations with identical data and store the count (in BCD) in location 0C40H /2420H. If three consecutive locations have identical data, the count shall be 2 and so on
+
+30. COUNT OF SPECIFIED BYTES:
+A block of memory starting at 0C20H / 2400H has got 32 bytes. Write a program to determine the number of times 00H, 01H, 02H, FEH and FFH occur in it. The counts (in BCD) are to be stored at locations starting from 0C40H / 2420H. Keep the count of any other bytes other than the above-specified bytes, together at last
+
+31. FORMATION OF A THIRD BLOCK:
+Two blocks of 10 bytes each are residing in locations 0C20H / 2400H and 0C30H / 2410H respectively, Write a program to form a third block of 10 bytes at locations starting from 0C40H / 2420H, such that each entry in that block is the one’s complement of the larger of the corresponding entries of the first two blocks (the nth entry in the third block shall be the one‘s complement of the larger of the nth entry of the first block and the nth entry of the second block)
+
+32. ADDRESS OF LAST NON-BLANK CHARACTER:
+An ASCII string exists in locations starting from 0C20H / 2400H and ends with a carriage return 0DH. Write a program to store the address of the last non-blank character at 0C10H / 2500H and 0C11H / 2501H. Also at 0C12H / 2502H store the index (in BCD) of the last non-blank character. If you do not find character in the string fill the location 0C10H / 2500H, 0C11H / 2501H and 0C12H / 2502H with 00H. Assume the length of the string is less than 99
+
+33. REPLACING TRAILING ZEROS WITH BLANKS:
+An ASCII string starts in location 0C21H / 2401H. The number of characters in the string is given in 0C20H / 2400H (in BCD). Write a program to edit the string by replacing all trailing zeros by blanks (ASCII for blank is 20H and zero is 30H)
+
+34. ADDING EVEN PARITY TO ASCII CHARACTERS:
+An ASCII string exists in locations 0C21H / 2401H. The number of characters in the string is given in 0C20H / 2400H (in BCD). Write a program to edit the string by adding even parity bit (at MS bytes) to the bytes having odd parity. Keep the count (in BCD) of the edited bytes at 0C1FH / 2500H
+
+35. COMPARISON OF TWO ASCII STRINGS:
+Two ASCII string starts at locations 0C21H / 2401H and 0C41H / 2501H respectively. The alphabets in the first string are in capital whereas those in the second string are in small. The numbers of Characters (in BCD) are given at 0C20H / 2400H and 0C40H / 2500H. Write a program to compare the two strings. If there is one-to-one correspondence between the two strings fill the location0C60H / 2600H with FFH, otherwise with 00H
+
+36.  ASCII TO HEXADECIMAL CONVERSION:
+10 bytes are residing in locations starting from 0C20H / 2400H. Write a program to check whether each of them is an ASCII representation of characters 0H to FH. If so replace them by their corresponding hexadecimal character at the same location, otherwise fill the corresponding location with an error code 00H
+
+37. AN ASCII STRING TO BYTE CONVERSION:
+An ASCII string of characters either with ASCII ‘0’ or ASCII ‘1’ or few characters other than    ASCII ‘0’ or ASCII ‘1’ exists in locations starting from 0C20H / 2400H and with a carriage return 0DH. Write a program to convert it to a corresponding byte. Disregard the invalid characters and take first eight valid characters. The first valid characters encountered should be treated as MS bit. If the string, which ends with a carriage, return 0DH does not contain eight valid characters fill all the remaining bits with 0s and form the byte. Store the byte in location 0C50H / 2500H
+
+38.  INSERTION TO A LIST:
+Write a program to insert the content at the location 0C20H / 2400H to a list which begins at 0C22H / 2402H, if not already present in the list and only if byte at location 0C20H / 2400H is divisible by two. The number of bytes in the list is given at location 0C21H / 2401H (in BCD). If the insertion is valid, insert the byte at the end of the list and modify the count accordingly
+
+39.  MAPPING A RECTANGLE:    
+16 x 8 bytes starting from 0C20H / 2400H are considered to be map as rectangle. The starting address of the left and bottom corner is given in 0CB0H / 2500H and 0CB1H / 2501H. The number of bits, which are ‘1’s in that location 
+	a. is given in 0CB2H / 2502H. The number of bits to be the width
+	b. is given in 0CB3H / 2503H. The number of bits to be the length     
+  c. is given in 0CB4H / 2504H. The number of bits to be the height
+Write a program to map a rectangle of the above dimensions in the base rectangle with all high bits (‘1’s) inside the mapped rectangle. (Refer to the following figure).
+
+
+                                    +-----------------------------------------------+   |
+                                    |                                               |   |
+                                    |                                               |   |
+                                    |     +-------------------------+ |             |   |
+                                    |     |                         | |             |   |
+                                    |     |                         | |             |   |
+                                    |     |<----------b------------>| c             |16 bits
+                                    |     |                         | |             |   |
+                                    |     |                         | |             |   |
+                                    |     +-------------------------+ |             |   |
+                                    |     <-a->                                     |   |
+                                    |                                               |   |
+                                    +-----------------------------------------------+   |
+                                    <-------------------8 bits---------------------->
+
+
+Application program related with 8085 PPI
+-----------------------------------------
+
+1. Write an assembly language program for generation of square wave using SOD pin of 8085
+2. Write an assembly language program for inputting an 8-bit data serially through SID pin of 8085
+3. Write an assembly language program for generation of square wave using 8255
+4. Write an assembly language program for inputting an 8-bit data through port A of 8255 in mode – 0
+5. Write an assembly language program for inputting an 8-bit data through port A of 8255 in mode – 1 through status check
+6. Write an assembly language program for display of message “HELP US” through 8279
+7. Write an assembly language program for generation of square wave using 8253
+8. Write an assembly language program to generate triangular wave using DAC 0808
+9. Write an assembly language program to generate saw tooth wave of magnitude 0 volt to +4 volts using DAC 0808
+10. Write an assembly language program to convert analog signals of magnitude +3.5 volts to +5 volts in steps of 0.25 volts to digital equivalent HEX values
+11. Write an assembly language program to calculate the conversion time of ADC using 8253 timer
+12. Write an assembly language program to observe waveforms of 8253 timer in different modes
+13. Write an assembly language program to control the speed of stepper motor using 8255 PPI
+14. Write an assembly language program to control the traffic lights using 8255 PPI
+15. Write an assembly language program to transfer data in DMA read mode using 8257 DMA Controller card
+16. Write an assembly language program to transfer data in DMA write mode using 8257 DMA Controller card
+17. Write an assembly language program for Burst Mode of operation of 8257 DMA controller
+18. Write an assembly language program to display “HELP” using 8259 PIC
+19. Introduction to micro-controller programming
+20. Interfacing of input and output devices with micro-controller

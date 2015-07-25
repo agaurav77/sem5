@@ -1,0 +1,89 @@
+CS 8102	- ARTIFICIAL INTELLIGENCE AND EXPERT SYSTEMS LAB
+--------------------------------------------------------
+
+1. Describe the following family tree as series of PROLOG facts.
+M – Married to
+C – Child of 
+
+Anthony–––M–––Mary
+  |		        |
+  C		        |
+Harry		     Hazel–––M–––Tom
+
+Write queries to answer the following:
+a) Who is the sister of Harry?
+b) Who is the father of Hazel?
+
+2. The following Diagram depicts name of employees and their supervisors.
+                Watson
+
+			Johnson		John		Banker
+
+			Smita		  Evens
+
+WAP which contain all the supervisor relationship in diagram and answer the given queries.
+  - who is supervisor of evens
+  - whom supervisor is Watson
+
+3. Write a PROLOG program that answers about family members and relationships. Include predicates & clauses which define sister, brother, father, mother, Grandchild, grandfather and uncle. The program should be able to answer question such as following.
+Father (X, bob)
+Grandson (X, Y)
+Uncle (bill, Sue)
+Mother (marry, X)
+
+4. Write Prolog Program to Create following database.
+
+     -------------------------------------------------------
+     | P_Name     |   Age   |      Hobby        |   Pet    |
+     | -----------|---------|-------------------|----------|
+     | Ram        |   15    | Football          | Dog      |
+     |------------|---------|-------------------|----------|
+     | Mohan      |   11    | Volleyball        | Cat      |
+     |------------|---------|-------------------|----------|
+     | Sohan      |   25    | Card              | Cow      |
+     |------------|---------|-------------------|----------|
+     | Mahesh     |   30    | Swimming          | Dog      |
+     |------------|---------|-------------------|----------|
+     | Ravindra   |   11    | Football          | GOat     |
+     |------------|---------|-------------------|----------|
+     | Rakesh     |   25    | Volleyball        | Cat      |
+     |------------|---------|-------------------|----------|
+     | Rajeev     |   15    | Swimming          | Dog      |
+     |------------|---------|-------------------|----------|
+     | Raju       |   30    | Swimming          | Dog      |
+     |------------|---------|-------------------|----------|
+     | Jaichand   |   40    | Football          | Cow      |
+     |------------|---------|-------------------|----------|
+     | Vijay      |   30    | Volleyball        | Cat      |
+     -----------------------------------------------------    
+
+a) Write Query to display P_name and age, P_Name and hobby.
+
+b) Find How many of them are child if age <=15 is child.
+
+c) X will like Y if X & Y are Persons & they are not same in age 
+   but  they are children & have a common interest then show  who 
+   likes whom.
+
+5. Write a Prolog code for Monkey Banana Problem.
+
+6. Write a prolog program for insertion sort and bubble sort.
+
+7. a) Write a prolog program to depict the functioning of cuts.
+   b) Write Prolog program to find the sum of numbers in a list. 
+
+8. Write a Program to reverse list of names.
+
+9. Prove that any planar graph cannot be colored with less than 4 colors in      prolog.
+
+10. Represent a graph in Prolog and apply Breath first search on it.
+
+Optional Programs:
+1. Write a program in prolog to implement dfs on water jug problem.
+Given a 4 - liter jug filled with water & an empty 3 - liter Jug, how can one obtain exactly 2 liters in 4 liters jug. There is no measuring mark on any of them.
+
+2. Solve the 8 puzzle Problem-using A* algorithm in Prolog.
+
+3. Write program for Backward and forward reasoning in Prolog
+4. Write a program to implement steepest ascent for 8 puzzle problem.
+

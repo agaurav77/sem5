@@ -1,0 +1,104 @@
+CS8101 - AIES
+-------------
+
+Module I 
+	Overview of Artificial Intelligence:
+	  Definition & Importance of AI
+	Knowledge: 
+	  General Concepts
+	  Introduction, 
+	  Definition and Importance of Knowledge, 
+	  Knowledge-Based Systems,
+	  Representation of Knowledge, 
+	  Knowledge Organization, 
+	  Knowledge Manipulation, 
+	  Acquisition of Knowledge
+
+Module II 
+	LISP and Other AI Programming Languages: 
+	  Introduction to LISP : Syntax and Numeric Function,
+	  Basic List Manipulation Functions in LISP, 
+	  Functions, 
+	  Predicates and Conditionals, 
+	  Input, Output and Local Variables, 
+	  Iteration and Recursion, 
+	  Property  Lists and Arrays, 
+	  Miscellaneous Topics, 
+	  PROLOG, 
+	  Other AI Programming Languages
+
+Module III
+	Knowledge Representation: 
+	  Introduction, 
+	  Syntax and Semantics for Propositional logic, 
+	  Syntax and Semantics for FOPL, 
+	  Properties of Wffs, 
+	  Conversion to Clausal Form, 
+	  Inference Rules, 
+	  The Resolution Principle, 
+	  No deductive Inference Methods, 
+	  Representations Using Rules.
+
+Module IV
+	Dealing with Inconsistencies and Uncertainties: 
+	  Introduction, 
+	  Truth Maintenance Systems, 
+	  Default Reasoning and the Closed World Assumption,
+	  Predicate Completion and Circumscription, 
+	  Modal and Temporal Logics.
+	Probabilistic Reasoning: 
+	  Introduction, 
+	  Bayesian Probabilistic Inference, 
+	  Possible World Representations,
+	  Dumpster-Shafer Theory, 
+	  Ad-Hoc Methods.
+
+Module V 
+	Structured Knowledge: 
+	  Graphs, Frames and Related Structures: Introduction, 
+	  Associative Networks, 
+	  Frame Structures,
+	  Conceptual Dependencies and Scripts.
+	Object-Oriented Representations: 
+	  Introduction, 
+	  Overview of Objects, 
+	  Classes, 
+	  Messages and Methods, 
+	  Simulation Example using an OOS Program.
+
+Module VI
+	Search and Control Strategies: 
+	  Introduction, 
+	  Preliminary Concepts, 
+	  Examples of Search Problems, 
+	  Uninformed or Blind Search, 
+	  Informed Search, 
+	  Searching And-Or Graphs.
+	Matching Techniques: 
+	  Introduction, 
+	  Structures Used in Matching, 
+	  Measures for Matching, 
+	  Matching Like Patterns, 
+	  Partial Matching.
+
+Module VII
+	Knowledge Organization and Management: 
+	  Introduction, 
+	  Indexing and Retrieval Techniques, 
+	  Integrating Knowledge in Memory, 
+	  Memory Organization Systems.
+	Expert Systems Architectures: 
+	  Introduction, 
+	  Rule Based System Architecture, 
+	  Non-Production System Architecture, 
+	  Dealing with uncertainty, 
+	  Knowledge Acquisition and Validation, 
+	  Knowledge System Building Tools.
+
+Text Book:
+1. Dan W. Patterson - Introduction to Artificial Intelligence and Expert Systems, PHI, New Delhi, 2006.
+    
+Reference Books: 
+1.  E. Rich & K. Knight - Artificial Intelligence, 2/e, TMH, New Delhi, 2005.
+2.  P.H. Winston - Artificial Intelligence, 3/e, Pearson Edition, New Delhi, 2006.
+3.  D.W. Rolston,- Principles of AI & Expert System Development, TMH, New Delhi.

@@ -151,6 +151,173 @@ American Standard Code for Information Interchange
 SAP concepts with stress on timing diagrams
 \end_layout
 
+\begin_layout Subsection
+Three State Output
+\end_layout
+
+\begin_layout Standard
+Typically, there are register and operation gates which have only two states
+ - high and low.
+ However, there is a third state, called 
+\series bold
+high impedance
+\series default
+ state, which is often used in computer design.
+ In this state, the output is a fluctuation of high and low, such that it
+ is effectively remoed from the circuit.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/three-state.jpg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Buses
+\end_layout
+
+\begin_layout Standard
+A bus is simply said, a collection of 1-bit data lines, such that it allows
+ for transfer of multi bit words in between connected registers.
+ Every register, for this purpose has two inputs, one for enable and one
+ for load.
+ If enable is high, then the output of the register is shown along the bus
+ which can be read by another register.
+ If load is high, a register reads the input from the bus and its value
+ changes to hold that value.
+\end_layout
+
+\begin_layout Standard
+Buses can be of two types - serial and parallel.
+\end_layout
+
+\begin_layout Standard
+[IMAGE]
+\end_layout
+
+\begin_layout Subsection
+SAP-1 for Intel 8085
+\end_layout
+
+\begin_layout Standard
+[IMAGE]
+\end_layout
+
+\begin_layout Enumerate
+Load next instruction's address into Program Counter.
+\end_layout
+
+\begin_layout Enumerate
+Store the address from Program Counter to MAR via bus.
+\end_layout
+
+\begin_layout Enumerate
+Fetch instruction from memory at memory address corresponding to the value
+ in MAR.
+\end_layout
+
+\begin_layout Enumerate
+Store instruction from memory into IR.
+\end_layout
+
+\begin_layout Enumerate
+Generate control sequence from IR's opcode and data.
+\end_layout
+
+\begin_layout Enumerate
+Execute accordingly.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+machine cycle
+\series default
+ is the the time taken for an entire fetch and execute cycle.
+ In SAP-1, the fetch cycle consists of 1, 2, 3 and the execute consists
+ of 4, 5, 6.
+ Each step is completed in 
+\begin_inset Formula $T$
+\end_inset
+
+ time.
+ Thus the machine cycle time for SAP-1 is 
+\begin_inset Formula $6T$
+\end_inset
+
+.
+ A more simpler version of 
+\series bold
+fetch cycle
+\series default
+ -
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ - address state or 
+\begin_inset Formula $PC_{\mbox{out}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+PC's value is output on bus.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ - increment state or 
+\begin_inset Formula $PC+1$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+PC is incremented and value of PC is stored into MAR.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ - memory state
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Data is fetched from memory.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Any operation is done via registers A, B and the output is typically stored
+ in register A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Microinstructions
 \end_layout

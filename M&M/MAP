@@ -1,0 +1,96 @@
+EC4205 - MICROPROCESSORS AND MICOCONTROLLERS
+--------------------------------------------
+
+Module – 1 (1,2): 
+  Revision of logic circuits with emphasis on control lines, 
+  SAP concepts with stress on timing diagrams, 
+  Microinstructions, 
+  Microprogramming, 
+  Variable machine cycle, 
+  Architecture of 8085 Processor, 
+  Functions of all signals, 
+  Bus concepts, 
+  Multiplexed and De-multiplexed Bus, 
+  Minimum system. 
+
+Module – 2 (1,2):
+  Instruction set, 
+  Addressing modes, 
+  Stack operation, 
+  Timing diagrams, 
+  Programming examples like 
+    Time delay, 
+    Looping, 
+    Sorting, 
+  Code conversions like 
+    BCD to Binary, 
+    Binary to BCD, 
+    HEX to ASCII, 
+    ASCII to HEX, 
+    BCD Arithmetic etc. 
+
+Module – 3 (1,2): 
+  8085 based Microcomputer system, 
+  Memory Organization, 
+  Memory Interfacing, 
+  Memory Mapped I/O, 
+  I/O Mapped I/O, 
+  Interrupts, 
+  Hardware and Software Interrupts, 
+  Interrupt instructions, 
+  Programmed I/O, 
+  Interrupt driven I/O, 
+  DMA.
+
+Module – 4 (1,2,3,4): 
+  Architecture of 8255 I/O peripheral chip,
+  Modes of operation,
+  Hand shake mode operation, 
+  BSR mode, 
+  ADC 0801 and ADC 0808 Interfacing with microprocessor, 
+  Analogue multiplexed ADC, 
+  DAC 0808 specifications, 
+  DAC Interfacing, 
+  Programming examples for Generation of 
+    square wave, 
+    positive and negatives ramps, 
+    triangular and sine waves, 
+  Sample and Hold circuit, 
+  LF 398 and its applications in Data Acquisition. 
+
+Module – 5 (3,4,5): 
+  8253 timer, 
+  Modes of operation, 
+  Applications, 
+  8279 Keyboard/Display Interface, 
+  Different modes of operation, 
+  Interfacing, 
+  Programming examples. 
+
+Module – 6 (5,6,7): 
+  Evolution of Microprocessors, 
+  Introduction (Architecture and Instruction set only) of 8086 and 8088,
+  Evolutionary steps and Additional features of 80186, 80286, 80386, 80486 and Pentium Processors,
+  Concept of CISC and RISC processors 
+
+Module - 7 (4,6,7,8): 
+  Introduction to Microcontrollers, 
+  8051 Microcontroller, 
+  Memory Organization, 
+  Programming techniques, 
+  Addressing modes, 
+  Instruction set, 
+  Interrupt structure, 
+  Port structure, 
+  Different modes of operation, 
+  Programming examples. 
+
+Text Books: 
+1. “Digital Computer Electronics”, 2/e. by A. P. Malvino. 
+2. “Microprocessor Architecture, Programming and Applications with 8085” by R. S. Gaonkar. 
+3. “Microprocessor and Interfacing, Programming of Hardware” by Douglas Hall. 
+4. “Microprocessor and Peripherals” by S. P. Chowdhury and Sunetra Chowdhury. 
+5. “The INTEL 8086/8088 Microprocessor, Architecture, Programming, Design and Interfacing”, 3/e. by Bhupendra Singh Chhabra. 
+6. “Microprocessor, Microcomputer and their Applications”, 2/e. by A, K. Mukhopadhyay. 
+7. “Advanced Microprocessor” by Y. Rajasree. 
+8. “Advanced Microprocessors and Microcontrollers” by S. K. Venkata Ram. 
