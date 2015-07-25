@@ -1,7 +1,7 @@
 CS 5101 - FORMAL LANGUAGES AND AUTOMATA THEORY
 ----------------------------------------------
 
-MODULE - I
+MODULE - I HOPCROFT(1.1,1.5,2)
   Introduction to Automata:
     Study and Central concepts of automata theory, 
     An informal picture of finite automata, 
@@ -9,39 +9,39 @@ MODULE - I
     applications of finite automata, 
     finite automata with epsilon – transitions.		      				
 
-MODULE - II	
+MODULE - II	HOPCROFT(3)
   Regular expression and languages: 
     Regular expressions, 
     finite automata and regular expressions, 
     applications of regular expressions, 
     algebraic laws of regular expressions.		
 
-MODULE - III
+MODULE - III HOPCROFT(4.1,4.2,4.4)
   Properties of Regular Languages: 
     Proving languages not to be regular, 
     closure properties of regular languages, 
     equivalence and minimization of automata.	
 
-MODULE - IV
+MODULE - IV HOPCROFT(5)
   Context – free Grammars and Languages: 
     Parse trees, 
     Applications of context free grammars, 
     Ambiguity in grammars and languages.			
 
-MODULE - V
+MODULE - V HOPCROFT(6)
   Pushdown Automata: 
     Pushdown automation (PDA), 
     the language of PDA, 
     equivalence of PDA’s and CFG’s, 
     Deterministic Pushdown Automata.	 
 
-MODULE - VI
+MODULE - VI HOPCROFT(7.1-7.3) 
   Properties of Context – Free Languages:
     Normal forms of context free grammars, 
     pumping lemma for context free languages, 
-    close properties of context free languages. 
+    closure properties of context free languages. 
 
-MODULE - VII
+MODULE - VII HOPCROFT(8.2-8.6)
   Introduction to Turing Machine: 
     The Turing machine, 
     programming techniques for Turing machine, 
@@ -50,7 +50,8 @@ MODULE - VII
     Turing Machines and Computers.		
 
 Text Books:
-1.	J.E. Hopcroft , et.al. - Introduction to Automata Theory, Languages and Computation, 2nd Edn. Pearson Education , New Delhi  2001
+1. J.E. Hopcroft , et.al. - Introduction to Automata Theory, Languages and Computation, 2nd Edn. Pearson Education , New Delhi  2001
+
 Reference Books:
-1.    K.L.P. Misra – et.al. - Theory of Computer Science, 2nd Edn. PHI, New Delhi, 2000
+1. K.L.P. Misra – et.al. - Theory of Computer Science, 2nd Edn. PHI, New Delhi, 2000
 2. J.C. Martin - Introduction to Languages and the Theory of Computation 2nd Edn, TMH, New Delhi, 2000.
