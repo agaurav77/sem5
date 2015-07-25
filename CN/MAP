@@ -1,16 +1,15 @@
 CS 6107 - COMPUTER NETWORKS
 ---------------------------
 
-MODULE I
+MODULE I PETERSON(1)
   Foundation:
     Applications, 
     Requirements, 
     Network Architecture, 
-    Implementing 
-    Network Software, 
+    Implementing Network Software, 
     Performance.
 
-MODULE II
+MODULE II PETERSON(2.1-2.5)
   Direct Link Networks: 
     Hardware Building Blocks, 
     Encoding (NRZ, NRZI, Manchester, 4B/5B), 
@@ -19,29 +18,29 @@ MODULE II
     Reliable Detection, 
     Reliable Transmission, 
 
-MODULE III
+MODULE III PETERSON(2.6-2.9)
   Ethernet (802.3), 
   Token Rings (802.5, FDDI), 
   Wireless (802.11), 
   Network adaptors.
 
-MODULE IV 
+MODULE IV PETERSON(4.1-4.3)
   Internetworking: 
     Simple Internetworking (IP),
     Routing, 
     Global Internet, 
 
-MODULE V
+MODULE V PETERSON(4.4-4.5)
   Multicast, 
   Multiprotocol Label Switching (MPLS).
 
-MODULE VI
+MODULE VI PETERSON(5)
   End-to-End Protocols: 
     Simple Demultiplexer (UDP), 
     Reliable Byte Stream (TCP), 
     Remote Procedure Call.
 
-MODULE VII
+MODULE VII PETERSON(6)
   Congestion Control and Resource Allocation: 
     Issues in Resource Allocation, 
     Queuing Disciplines, 
