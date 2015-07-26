@@ -11,14 +11,14 @@
 \fontencoding global
 \font_roman default
 \font_sans default
-\font_typewriter Inconsolata
+\font_typewriter default
 \font_math auto
 \font_default_family default
-\use_non_tex_fonts true
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 90
+\font_tt_scale 90
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -135,7 +135,257 @@ WAN
 \end_layout
 
 \begin_layout Subsection
+Basic Working
+\end_layout
 
+\begin_layout Standard
+Computer networks have transmitters and receivers inside computers on the
+ network, which wish to communicate.
+ The physical media may be via wires (ether, optical fibre etc.) or wireless.
+ Transmitters generate electrical or radio signals which are received by
+ the receivers.
+ The signals sent may be either 
+\emph on
+analog
+\emph default
+ or 
+\emph on
+digital
+\emph default
+.
+ Analog signals have continuous signal values, whereas digital signals have
+ discrete signal values (binary data transmission).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-2-basic-working.svg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bandwidth
+\series default
+ is the difference in the largest frequency and smallest frequency of signals.
+ It is measured in Hertz.
+
+\series bold
+ Medium
+\series default
+ is the physical space through which signals travel.
+ Media can be 
+\emph on
+wired
+\emph default
+ or 
+\emph on
+wireless
+\emph default
+.
+ Wired media can be 
+\emph on
+twisted pair
+\emph default
+, 
+\emph on
+coaxial cable
+\emph default
+ or 
+\emph on
+optical fibre
+\emph default
+.
+ Both media and signals have bandwidths.
+ Signals must have those frequencies which are allowed in the medium, otherwise
+ attenuation occurs and there is data loss.
+ In general, coaxial cables have greater bandwidth than twisted pair cables.
+ For digital signals, theoretically the frequency change rate at signal
+ change is 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ Most of the frequencies are typically near a suitable value.
+ If all the major components of a signal are received, then the original
+ signal can be reconstructed.
+\end_layout
+
+\begin_layout Subsection
+Methods of Transmission
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename img/1-3-methods-of-transmission-direction.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Serial & Parallel Communication
+\end_layout
+
+\begin_layout Standard
+In 
+\emph on
+serial 
+\emph default
+communication, the data is sent one bit at a time.
+ In 
+\emph on
+parallel 
+\emph default
+communication, the data is sent multiple bits / words at a time over multiple
+ lines.
+ While serial communication is slower than parallel for the same amount
+ of data transfer, parallel data transfer causes issues like 
+\emph on
+bit mismatch
+\emph default
+, or incorrect grouping of bits.
+ Thus for long distance communication, serial communication is used, whereas
+ parallel communication is used for short distance communication.
+\end_layout
+
+\begin_layout Subsection
+Serial Communication : Synchronicity
+\end_layout
+
+\begin_layout Standard
+Generally, the loss of synchronicity occurs due to a difference in clock
+ times.
+ To have 
+\emph on
+synchronous
+\emph default
+ signals, we send a clock signal after a data signal, or we may encode data
+\begin_inset Formula $+$
+\end_inset
+
+clock and send it as one signal.
+ Encoding can be via amplitude, frequency or phase.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-5-loss-of-synchronicity.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another way is use 
+\emph on
+asynchronous 
+\emph default
+signals.
+ When no data is to be sent, an inverted high signal is sent.
+ To initialise the receiving device, we send a low signal for some time
+ and then as usual, send high and low signals as according to the data.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-5-asynchronous-signals.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Switching Techniques
+\end_layout
+
+\begin_layout Standard
+The two major switching techniques used in a network include 
+\emph on
+circuit switching
+\emph default
+ and 
+\emph on
+packet switching
+\emph default
+.
+ In circuit switching, there is a dedicated path from source to destination.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-6-circuit-switching.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The network consists of terminal nodes and intermediate switching stations
+ (for example, telephone exchanges worked like this).
+ When some data is to be sent from one node to another, the switching stations
+ make a dedicated path from sender to receiver.
+ No other communication happens via this path for the time being.
+ Hence, there is a wastage of bandwidth.
+ Hence, circuit switching is not preferrable.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In packet switching, data is divided into packets and then sent via intermediate
+ switches.
+ There is no dedicated path from source to destination.
+ Packet switching can be of two types -
+\end_layout
+
+\begin_layout Itemize
+In 
+\emph on
+datagram
+\emph default
+ approach, packets have information about source and destination, and based
+ on it, each node decides where the packet should go.
+ Routing algorithms are employed to make the decision.
+\end_layout
+
+\begin_layout Itemize
+In 
+\emph on
+virtual circuit
+\emph default
+ approach, a path is decided from the source to destination (takes computation
+ time), but the path is not reserved.
+ The decided path can still form a part of other paths, even when a packet
+ is going.
+ VCI, a common term in this approach, refers to 
+\series bold
+Virtual Circuit Identifier
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+The relative order of packets is maintained in virtual circuit approach,
+ but not in datagram approach.
 \end_layout
 
 \end_body
