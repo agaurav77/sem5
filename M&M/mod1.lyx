@@ -140,13 +140,6 @@ American Standard Code for Information Interchange
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 SAP concepts with stress on timing diagrams
 \end_layout
@@ -191,22 +184,22 @@ A bus is simply said, a collection of 1-bit data lines, such that it allows
  which can be read by another register.
  If load is high, a register reads the input from the bus and its value
  changes to hold that value.
+ Buses can be of two types - serial and parallel.
 \end_layout
 
 \begin_layout Standard
-Buses can be of two types - serial and parallel.
-\end_layout
+\align center
+\begin_inset Graphics
+	filename img/2-2-complex-bus.svg
+	scale 60
 
-\begin_layout Standard
-[IMAGE]
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 SAP-1 for Intel 8085
-\end_layout
-
-\begin_layout Standard
-[IMAGE]
 \end_layout
 
 \begin_layout Enumerate
@@ -232,6 +225,17 @@ Generate control sequence from IR's opcode and data.
 
 \begin_layout Enumerate
 Execute accordingly.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-3-sap-1.png
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -309,6 +313,122 @@ Data is fetched from memory.
 \begin_layout Standard
 Any operation is done via registers A, B and the output is typically stored
  in register A.
+ The control sequence is of the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{C_{P}E_{P}\bar{L_{M}}\bar{C_{E}}\bar{L_{I}}\bar{E_{I}}\bar{L_{A}}E_{A}S_{V}E_{V}\bar{L_{B}}\bar{L_{O}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The PC (Program Counter) holds the address of next instruction to be executed.
+ MAR (Memory Address Register) and Input has data and address registers.
+ The memory is TTL type.
+ In SAP - 1, the various operations possible include 
+\family typewriter
+LDA <address>
+\family default
+, 
+\family typewriter
+ADD <address>
+\family default
+, 
+\family typewriter
+SUB <address>
+\family default
+, 
+\family typewriter
+OUT
+\family default
+ and 
+\family typewriter
+HLT
+\family default
+.
+ Respective opcodes are 
+\family typewriter
+0000
+\family default
+, 
+\family typewriter
+0001
+\family default
+, 
+\family typewriter
+0010
+\family default
+, 
+\family typewriter
+1110
+\family default
+ and 
+\family typewriter
+1111
+\family default
+.
+ User input is taken typically via registers 
+\family typewriter
+6H-8H
+\family default
+.
+\end_layout
+
+\begin_layout Subsection
+Instruction Types
+\end_layout
+
+\begin_layout Standard
+In general, the instructions may be 
+\emph on
+memory referencing
+\emph default
+ (like 
+\family typewriter
+LDA
+\family default
+, 
+\family typewriter
+ADD
+\family default
+, 
+\family typewriter
+SUB
+\family default
+) or 
+\emph on
+non memory referencing
+\emph default
+ (like 
+\family typewriter
+OUT
+\family default
+, 
+\family typewriter
+HLT
+\family default
+).
+ 
+\family typewriter
+HLT
+\family default
+ stops the clock and halts the program.
+
+\family typewriter
+ OUT
+\family default
+ prints the output i.e.
+ value of register 
+\begin_inset Formula $A$
+\end_inset
+
+ via the binary display.
 \end_layout
 
 \begin_layout Standard
