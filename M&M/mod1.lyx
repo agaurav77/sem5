@@ -256,7 +256,8 @@ machine cycle
 \end_inset
 
 .
- A more simpler version of 
+ SAP-1 has a fixed clock cycle time.
+ The 
 \series bold
 fetch cycle
 \series default
@@ -314,14 +315,22 @@ Data is fetched from memory.
 Any operation is done via registers A, B and the output is typically stored
  in register A.
  The control sequence is of the form
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\mbox{C_{P}E_{P}\bar{L_{M}}\bar{C_{E}}\bar{L_{I}}\bar{E_{I}}\bar{L_{A}}E_{A}S_{V}E_{V}\bar{L_{B}}\bar{L_{O}}}
+\mbox{C_{P}E_{P}L'_{M}C'_{E}L'_{I}E'_{I}L'_{A}E'_{A}S_{U}E_{U}L'_{B}L'_{O}}
 \]
 
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -429,17 +438,280 @@ HLT
 \end_inset
 
  via the binary display.
+ In SAP-1, the number of instructions are few, so it is easy to create a
+ controller sequencer specifically tailored to generate the control sequences
+ we need.
+ However, as the complexity of hardware increases, and more and more instruction
+s are accomodated, it becomes difficult to design a controller sequencer
+ which works by simple logic.
+ Thus we use a 
+\emph on
+hardware control matrix
+\emph default
+ which has a mapping of the instructions and the subsequent control sequences.
 \end_layout
 
+\begin_layout Section
+Microinstructions
+\end_layout
+
+\begin_layout Standard
+The accumulator register or 
+\family typewriter
+Reg A
+\family default
+ stores the result of all 
+\family typewriter
+ADD
+\family default
+ or 
+\family typewriter
+SUB
+\family default
+ operations.
+ By default, the input operands are the values stored in 
+\family typewriter
+Reg A
+\family default
+ and 
+\family typewriter
+Reg B
+\family default
+.
+ In SAP-1, we have 4 bit opcodes, 4 bit addresses, and 8 bit data.
+\end_layout
+
+\begin_layout Subsection
+Fetch Cycle
+\end_layout
+
+\begin_layout Standard
+The fetch cycle is quite the same for all operations, taking 
+\begin_inset Formula $3T$
+\end_inset
+
+ clock cycles.
+ For each of the steps in the fetch cycle, the controller sequencer generates
+ a control sequence of 12 bits.
+ Essentially this control sequence is a sequence of binary microinstructions
+ that enable or disable portions of microprocessor and allow for read write
+ and processing operations.
+ For SAP-1, the control sequences can be written as
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{1}=\mbox{E_{P}L'_{M}}$
+\end_inset
+
+, enable 
+\begin_inset Formula $PC$
+\end_inset
+
+ and get its value on bus, and simultaneously load 
+\begin_inset Formula $MAR$
+\end_inset
+
+ from bus.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{2}=\mbox{C_{P}}$
+\end_inset
+
+, increment 
+\begin_inset Formula $PC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{3}=\mbox{C'_{E}L'_{I}}$
+\end_inset
+
+, read data from memory using chip enable and load it into 
+\begin_inset Formula $IR$
+\end_inset
+
+ simultaneously.
+\end_layout
+
+\begin_layout Subsection
+Execute Cycle
+\end_layout
+
+\begin_layout Standard
+The execute cycle is dynamic in the sense that the number of micro instructions
+ needed to complete the cycle depends directly on what the instruction is.
+ All the loading of data into bus or from it to any register happens in
+ the midway of any clock cycle.
+ Why? This is because of the intermediate 
+\emph on
+setup time
+\emph default
+ and 
+\emph on
+hold time
+\emph default
+.
+ Setup time is the amount of time an input is given before it is loaded
+ into a register.
+ Hold time is the time needed before the output of a register stabilises
+ and is available for use.
+ The dynamic nature of execute cycle is evident from how we program microinstruc
+tions for 
+\family typewriter
+LDA
+\family default
+, 
+\family typewriter
+ADD
+\family default
+ and 
+\family typewriter
+SUB
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+For 
+\family typewriter
+LDA <address>
+\family default
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+, address is sent to 
+\begin_inset Formula $MAR$
+\end_inset
+
+ so that data can be fetched from the subsequent memory location.
+ Thus we need to activate 
+\begin_inset Formula $MAR$
+\end_inset
+
+ and 
+\begin_inset Formula $IR$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $T_{4}=\mbox{L'_{M}E'_{I}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+in 
+\begin_inset Formula $T_{5}$
+\end_inset
+
+, data is read from memory corresponding to the address in 
+\begin_inset Formula $MAR$
+\end_inset
+
+, and read data is stored in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This concludes 
+\family typewriter
+LDA
+\family default
+.
+ So, 
+\begin_inset Formula $T_{5}=\mbox{C'_{E}L'_{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{6}=\mbox{NOP}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For 
+\family typewriter
+ADD
+\family default
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{4}=\mbox{L'_{M}E'_{I}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+In 
+\begin_inset Formula $T_{5}$
+\end_inset
+
+, read data is stored in 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $T_{5}=\mbox{C'_{E}L'_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{6}=E_{U}$
+\end_inset
+
+ (addition).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For 
+\family typewriter
+SUB
+\family default
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Same as 
+\family typewriter
+ADD
+\family default
+, except that last instruction is 
+\begin_inset Formula $T_{6}=S_{U}$
+\end_inset
+
+(subtraction).
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Microinstructions
 \end_layout
 
 \begin_layout Section

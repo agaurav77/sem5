@@ -11,7 +11,7 @@ A word is residing in location 0C40H / 2400H. Write a program to check each bit 
 Write a program to fill up 128 locations starting from 0C00H / 2400H with bytes in the following pattern: first 64 locations to be filled up as 00H, 11H, 22H, ------, FFH, 00H, 11H, 22H, --------- and so on and the last 64 locations to be filled up as FFH, EEH, DDH, ---------, 00H, FFH, EEH, DDH and so on
 
 4. ADDITION OF 12 BYTES:
-Write a program to add 12 bytes residing in locations starting from 0C20H / 2400H, and store the sum in location 0C30H / 2500H (result space 2 bytes)
+Write a program to add 12 bytes residing in locations starting from C20H0 / 2400H, and store the sum in location 0C30H / 2500H (result space 2 bytes)
 
 5. SORTING IN DESCENDING ORDER:
 Write a program to sort 16 bytes residing in locations starting from 0C20H / 2400H, in descending order in the same location 
