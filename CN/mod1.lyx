@@ -388,5 +388,390 @@ The relative order of packets is maintained in virtual circuit approach,
  but not in datagram approach.
 \end_layout
 
+\begin_layout Subsection
+Types of Multiplexing
+\end_layout
+
+\begin_layout Standard
+If we have a lot of data to send, often sending it at an increased data
+ rate leads to not utilising the entire bandwidth available, and thus there
+ is 
+\emph on
+bandwidth wastage
+\emph default
+.
+ This wastage can be prevented by combining multiple signals into one signal
+ utilising the entire bandwidth available.
+ This process is called 
+\emph on
+multiplexing
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Frequency Division Multiplexing
+\end_layout
+
+\begin_layout Standard
+FDM is strictly not for digital signals.
+ The modulation of carrier signal can be done in three ways -
+\end_layout
+
+\begin_layout Itemize
+amplitude modulation (AM)
+\end_layout
+
+\begin_layout Itemize
+frequency modulation (FM)
+\end_layout
+
+\begin_layout Itemize
+phase modulation (PM)
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-7-fdm.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+FDM is used in TV signals (each channel typically has around 
+\begin_inset Formula $6$
+\end_inset
+
+ MHz bandwidth), radio signals and were also a feature of first generation
+ phones.
+ To prevent data interference between various channels (due to noise), we
+ leave some frequency space between them.
+ So, for the above example, we could have a 2 KHz space between signals,
+ which will give us signals from 
+\begin_inset Formula $20-24,26-30,30-34$
+\end_inset
+
+ KHz.
+\end_layout
+
+\begin_layout Subsubsection*
+Time Division Multiplexing
+\end_layout
+
+\begin_layout Standard
+In TDM, the data rate of the combined signal is usually less than the maximum
+ allowed data rate of the medium.
+ Here, we do not divide bandwidth to send signals, but instead use 
+\emph on
+baseband channels
+\emph default
+.
+ For each time frame of the new signal, the input signals are combined in
+ a RR fashion, each signal getting a 
+\emph on
+time slot 
+\emph default
+which allows every signal to utilise the maximum bandwidth available, but
+ reduces the net data rate.
+ TDM is the only method of multiplexing available for digital signals.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/1-7-tdm.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Exercise
+\emph default
+ - Suppose we have 4 slots per frame in a TDM setup.
+ The four input signals have a data rate of 
+\begin_inset Formula $1$
+\end_inset
+
+ KBit/s each.
+ What is the data rate of the transmitted signal?
+\end_layout
+
+\begin_layout Subsection
+Network Congestion
+\end_layout
+
+\begin_layout Standard
+At the receiver end, we may use FIFO, FCFS or RR to group the incoming packets
+ for TDM.
+ If the rate of incoming packets is more than the transmission rate, we
+ maintain a 
+\emph on
+queue buffer
+\emph default
+ which transmits the packet as soon as the transmitter is available.
+ Packets may be dropped if there is no space in the queue buffer.
+ This is the usual scenario in 
+\emph on
+network congestion
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Networking Abstraction and Topology
+\end_layout
+
+\begin_layout Subsection
+Common Topologies
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+topology
+\emph default
+ is a specific fashion in which the computers, nodes or servers are arranged
+ in a network with the network devices like routers, bridges, hubs and switches.
+ The 
+\emph on
+MAC address
+\emph default
+ is a unique 6 byte identifier which identifies a network interface on a
+ computer in a network.
+ Similarly, the 
+\emph on
+IP address
+\emph default
+ is another way of identifying computers globally on the internet.
+ It contains a 
+\emph on
+network address
+\emph default
+ and a 
+\emph on
+host address
+\emph default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+point to point
+\emph default
+ link is a direct connection between two hosts.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-1-ppp-link.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Other common topologies include 
+\emph on
+bus topology 
+\emph default
+and 
+\emph on
+ring topology
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-1-bus-ring-topology.svg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Common errors on such networks include bit errors, bus errors and device
+ or media failures.
+\end_layout
+
+\begin_layout Subsection
+Problems in Networking
+\end_layout
+
+\begin_layout Standard
+Some computer applications need all packets of data to be sent and received,
+ in some applications that may not be necessary, and sometimes the order
+ of packets sent or received is of prime importance.
+ While networks have to deal with proper transmission and reception of packets,
+ they are expected to provide important services despite all common errors.
+\end_layout
+
+\begin_layout Subsection
+Abstraction : Internet Protocol Stack
+\end_layout
+
+\begin_layout Standard
+Due to issues mentioned in the previous section, we describe networking
+ in different levels of abstraction, each providing several features, using
+ distinct protocols and solving some problems.
+ This abstraction also defines the interface between layers.
+ At each layer, data is encapsulation.
+ Services between layers are also allowed.
+ Thus, abstraction defines
+\end_layout
+
+\begin_layout Itemize
+how peer layers communicate
+\end_layout
+
+\begin_layout Itemize
+how different layers communicate
+\end_layout
+
+\begin_layout Standard
+All these layers together constitute the 
+\emph on
+internet protocol stack
+\emph default
+.
+ These layers are
+\end_layout
+
+\begin_layout Subsubsection*
+Application Layer 
+\end_layout
+
+\begin_layout Standard
+It allows for communication between applications on a network.
+ Examples of protocols involved - FTP, Telnet, HTTP, SMTP, DNS, DHCP (port
+ number is used for communication).
+\end_layout
+
+\begin_layout Subsubsection*
+Transport Layer 
+\end_layout
+
+\begin_layout Standard
+It allows for communication between processes on different computers on
+ a network.
+ Protocols - TCP, UDP.
+\end_layout
+
+\begin_layout Enumerate
+TCP (Transmission Control Protocol) is a reliable transfer protocol, which
+ drops duplicates packets, ensures ordered delivery of packets, ensures
+ that all packets are sent and has more packet size than UDP, since it has
+ to maintain extra data in the packet header.
+\end_layout
+
+\begin_layout Enumerate
+UDP (User Datagram Protocol) is an unreliable but fast (faster than TCP)
+ protocol.
+ UDP is used by DNS and HTTP.
+\end_layout
+
+\begin_layout Subsubsection*
+Network Layer 
+\end_layout
+
+\begin_layout Standard
+It is responsible for deciding the path of the packet, how it is sent, routed
+ etc.
+ It is responsible for communication required by transport and application
+ layers.
+ Example protocols - IP (Internet Protocol, unreliable).
+
+\emph on
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Link Layer
+\end_layout
+
+\begin_layout Standard
+Once the packet arrives in a network, the link layer ensures that it goes
+ from the source to the destination host (host-host or hop-hop).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-3-link-layer.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Physical Layer
+\end_layout
+
+\begin_layout Standard
+It ensures the transmission and reception of all the bits via some physical
+ medium from one node to another in a network.
+ It decides whether the signal sent is analog or digital, what type of modulatio
+n is used and much more about the signal.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-3-internet-protocol-stack-layers.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+How a packet is created
+\end_layout
+
+\begin_layout Standard
+Protocols at higher stages are multiplexed by protocols at lower stages.
+ For example, FTP and HTTP may employ TCP to send packets, which may use
+ IP and so on.
+ Demultiplexing is done similarly and the reverse processed is applied as
+ per the type of packet, which can be guessed by the port number on which
+ the packet arrives.
+ All layers add some information in the packet headers, which is then sent
+ and similarly deciphered at the receiving end.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/2-4-packet-encapsulation.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

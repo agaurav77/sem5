@@ -105,9 +105,199 @@ Automata Theory
 \end_layout
 
 \begin_layout Standard
-Automata (singular automaton) is the study of abstract machines, and their
- abilities to solve problems.
+
+\emph on
+Automata
+\emph default
+ (singular automaton) is the study of abstract machines, and their abilities
+ to solve problems.
+ Types include Finite Automata, Push Down Automata, Linear Bound Automata
+ and study of Turing Machines.
+ Theoretical computer science focuses on abstract, logical and mathematical
+ aspects of computing.
+\end_layout
+
+\begin_layout Subsection
+Terminology
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+statement
+\emph default
+ is a clear and distinctly formed expression that has some facts.
+\end_layout
+
+\begin_layout Itemize
+Proofs can be 
+\emph on
+inductive 
+\emph default
+or 
+\emph on
+deductive
+\emph default
+.
+ The former kind of proofs are done via mathematical induction.
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+counter example
+\emph default
+ is an example which proves a statement wrong.
+\end_layout
+
+\begin_layout Itemize
+There are mutiple ways to describe a 
+\emph on
+set
+\emph default
+.
+ These include -
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+specifying the properties of elements eg.
+ the set of all natural numbers
+\end_layout
+
+\begin_layout Itemize
+specifying all elements in the set eg.
  
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+recursive definitions eg.
+ 
+\begin_inset Formula $\{a_{n}\,|\,a_{n}=a_{n-1}+3,a_{0}=1\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For certain considerations, each set is a subset of a larger fixed set called
+ the 
+\emph on
+universal set
+\emph default
+ 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A set with only one element is called a 
+\emph on
+singleton set
+\emph default
+.
+ For example, 
+\begin_inset Formula $\{1\}$
+\end_inset
+
+ is singleton.
+\end_layout
+
+\begin_layout Itemize
+The 
+\emph on
+cardinality 
+\emph default
+of a set is the total number of elements in it.
+ It is represented by 
+\begin_inset Formula $n(S)$
+\end_inset
+
+ for the set 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A subset is a subportion of a given set.
+ Subsets may be 
+\emph on
+proper
+\emph default
+ or 
+\emph on
+improper
+\emph default
+.
+ The set of all subsets of any set 
+\begin_inset Formula $S$
+\end_inset
+
+ is called its 
+\emph on
+powerset
+\emph default
+ 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $n(E)=2^{n(S)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+null set 
+\emph default
+
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\emph on
+ 
+\emph default
+is an empty set.
+ So, 
+\begin_inset Formula $\phi=\{\}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $E(\phi)=\{\{\}\}=\{\phi\}$
+\end_inset
+
+, 
+\begin_inset Formula $E(E(\phi))=\{\phi,\{\phi\}\}$
+\end_inset
+
+ and so on.
+\end_layout
+
+\begin_layout Itemize
+Set operations are either 
+\emph on
+unary 
+\emph default
+or 
+\emph on
+binary
+\emph default
+.
 \end_layout
 
 \end_body
